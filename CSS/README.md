@@ -60,30 +60,28 @@
   | 문자 선택자 | ::selection | p::selection |
 
 * 속성 선택자 비교 기호
+  + [속성~=값] : 속성 값이 특정 값을 단어로 포함하는 요소 선택(단어 단위)
+  + [속성|=값] : 속성 값이 특정 값을 포함하거나 특정 값 뒤에 하이픈 기호(-)로 시작하는 속성값을 포함하는 요소 선택(단어 단위)
+  + [속성^=값] : 속성 값이 특정 값으로 시작되는 요소 선택
+  + [속성$=값] : 속성 값이 특정 값으로 끝나는 요소 선택
+  + [속성*=값] : 속성 값이 특정 값을 포함하는 요소 선택
 
-  [속성~=값] : 속성 값이 특정 값을 단어로 포함하는 요소 선택(단어 단위)
-  [속성|=값] : 속성 값이 특정 값을 포함하거나 특정 값 뒤에 하이픈 기호(-)로 시작하는 속성값을 포함하는 요소 선택(단어 단위)
-  [속성^=값] : 속성 값이 특정 값으로 시작되는 요소 선택
-  [속성$=값] : 속성 값이 특정 값으로 끝나는 요소 선택
-  [속성*=값] : 속성 값이 특정 값을 포함하는 요소 선택
 
 * 상태 선택자
-
-  :checked : 체크 상태의 input 요소 선택
-  :focus : 초점이 맞춰진 input 요소 선택
-  :enabled : 사용 가능한 input 요소 선택
-  :disabled : 사용 불가능한 input 요소 선택
+  + :checked : 체크 상태의 input 요소 선택
+  + :focus : 초점이 맞춰진 input 요소 선택
+  + :enabled : 사용 가능한 input 요소 선택
+  + :disabled : 사용 불가능한 input 요소 선택
 
 * 구조 선택자
-
-  :first-child : 형제 관계 중 첫 번째에 위치하는 요소 선택
-  :last-child : 형제 관계 중 마지막에 위치하는 요소 선택
-  :nth-child(수열) : 형제 관계 중 앞에서 수열 번째에 해당하는 요소 선택
-  :nth-last-child(수열) : 사용 불가능한 input 요소 선택
-  :first-of-type : 형제 관계 중 첫 번째로 등장하는 특정 요소 선택
-  :last-of-type : 형제 관계 중 마지막으로 등장하는 특정 요소 선택
-  :nth-of-type(수열) : 형제 관계 중 앞에서 수열 번째로 등장하는 특정 요소 선택
-  :nth-last-of-type(수열) : 형제 관계 중 뒤에서 수열 번째로 등장하는 특정 요소 선택
+  + :first-child : 형제 관계 중 첫 번째에 위치하는 요소 선택
+  + :last-child : 형제 관계 중 마지막에 위치하는 요소 선택
+  + :nth-child(수열) : 형제 관계 중 앞에서 수열 번째에 해당하는 요소 선택
+  + :nth-last-child(수열) : 사용 불가능한 input 요소 선택
+  + :first-of-type : 형제 관계 중 첫 번째로 등장하는 특정 요소 선택
+  + :last-of-type : 형제 관계 중 마지막으로 등장하는 특정 요소 선택
+  + :nth-of-type(수열) : 형제 관계 중 앞에서 수열 번째로 등장하는 특정 요소 선택
+  + :nth-last-of-type(수열) : 형제 관계 중 뒤에서 수열 번째로 등장하는 특정 요소 선택
 
 * 복합 선택자
   + 두 개 이상의 선택자가 결합된 형태
@@ -105,31 +103,29 @@
 ### CSS 단위와 스타일 속성 ###
 
 #### 크기 단위 ####
-
-  % : 백분율 단위
-  vh : 뷰포트 백분율 단위(높이)
-  vw : 뷰포트 백분율 단위(너비)
-  vmin : 뷰포트 백분위 단위(최소)
-  vmax : 뷰포트 백분위 단위(최대)
-  em : 배수 단위
-  rem : 최상위 비교 배수 단위
-  ch : 문자 개수 크기(4ch : 4개 문자 포함 크기)
-  ex : 소문자의 높이값 (em의 절반값)
-  px : 픽셀 단위 크기
-  in : 인치 단위 크기
-  pt : 포인트 단위 크기(1pt = 1/72in)
-  pc : 파이카 단위 크기(1pc = 12pt = 1/6in)
-  cm : cm 단위
-  mm : mm 단위
+  + % : 백분율 단위
+  + vh : 뷰포트 백분율 단위(높이)
+  + vw : 뷰포트 백분율 단위(너비)
+  + vmin : 뷰포트 백분위 단위(최소)
+  + vmax : 뷰포트 백분위 단위(최대)
+  + em : 배수 단위
+  + rem : 최상위 비교 배수 단위
+  + ch : 문자 개수 크기(4ch : 4개 문자 포함 크기)
+  + ex : 소문자의 높이값 (em의 절반값)
+  + px : 픽셀 단위 크기
+  + in : 인치 단위 크기
+  + pt : 포인트 단위 크기(1pt = 1/72in)
+  + pc : 파이카 단위 크기(1pc = 12pt = 1/6in)
+  + cm : cm 단위
+  + mm : mm 단위
 
 #### 색상 단위 ####
-
-  색상명 : black, blue 등
-  #NNN, #NNNNNN : HEX 코드 단위
-  rgb(red,green,blue) : RGB 색상 단위
-  rgba(red,green,blue,alpha) : RGBA 색상 단위
-  hsl(hue, saturation, lightness) : HSL 색상 단위
-  hsla(bue, saturation, lightness, alpha) : HSLA 색상 단위
+  + 색상명 : black, blue 등
+  + #NNN, #NNNNNN : HEX 코드 단위
+  + rgb(red,green,blue) : RGB 색상 단위
+  + rgba(red,green,blue,alpha) : RGBA 색상 단위
+  + hsl(hue, saturation, lightness) : HSL 색상 단위
+  + hsla(bue, saturation, lightness, alpha) : HSLA 색상 단위
 
 * Gradient
   + 선형 : linear-gradient() 함수 사용
