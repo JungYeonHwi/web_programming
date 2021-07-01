@@ -148,4 +148,41 @@
 #### 스타일 속성 ####
 
 * background 관련 속성
-  + background-color : <color> 
+  + background-color : 배경색 지정
+  + background-image:url : 배경 이미지 지정
+  + background-size: 배경 이미지의 크기
+  + background-repeat : 배경 이미지의 반복 여부
+  + background-attachment : 배경화면을 붙이는 방식
+  + background-position : 배경 화면의 위치
+
+* 폰트 관련 속성
+  + font-size : 글자의 크기를 지정하는 스타일 속성
+  + font-family : 폰트를 지정하는 속성, 두 단어 이상으로 된 폰트일 경우 큰 따옴표 ("")로 묶음, 폰트명을 콤마(,)로 구분하여 여러 개 나열 가능
+  + font-style : 폰트의 기울기, 두께 조절을 위한 스타일 속성
+  + font-weight : 폰트의 두께를 조절하기 위한 스타일 속성, 두께를 지원하지 않는 폰트는 적용이 안됨
+  + line-height:글자가 차지하는 높이를 지정하는 속성이나 높이를 지정하기보다는 글자를 수직 중앙 정렬할 때 사용
+  + text-align : 글자 정렬을 위한 속성
+  + text-decoration : 글자의 밑줄과 관련된 속성
+  + color : 글자의 색상 설정
+
+* visibility 속성
+  + visible : 요소를 보이게 함(기본값)
+  + hidden : 요소를 보이지 않게 함
+
+* opacity 속성
+  + 요소의 투명도를 조절
+  + 값의 범위 : 0.0~1.0
+  + 0.0 : 투명한 상태
+  + 1.0 : 불투명한 상태
+
+* border 관련 속성
+  + border-width : 테두리의 두께 지정
+  + border-style : 테두리 선의 스타일 지정
+  + border-color : 테두리의 색상 지정
+  + border : 테두리 두께, 스타일, 색상을 한 번에 지정
+  + border-radius : 테두리의 모서리를 둥글게 처리
+
+* 그림자 속성
+  + text-shadow : 선택된 요소의 글자에 그림자를 부여하는 속성
+  + box-shadow : 선택된 요소의 박스에 그림자를 부여하는 속성
+  + text-shadow와 box-shadow 속성은 콤마(,)로 구분하여 여러 그림자를 넣을 수 있음
