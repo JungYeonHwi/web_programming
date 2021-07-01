@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>링크 선택자</title>
+  <style>
+    a { text-decoration: none; }
+    a:visited { color: red; }
+    a:link::after { content: '-' attr(href); }
+  </style>
+</head>
+<body>
+  <a>Nothing</a><br/>
+  <a href=“http://www.google.com”>Google</a><br/>
+  <a href=“http://www.naver.com”>Naver</a><br/>
+  <a href=“http://www.daum.net”>Daum</a><br/>
+</body>
+</html>
