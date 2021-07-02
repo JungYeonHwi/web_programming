@@ -98,7 +98,7 @@
     5. 태그 이름으로 지정한 스타일
     6. 상위 객체에 의한 상속된 스타일
   + 같은 우선수위의 경우 뒤에 적용된 스타일이 적용
-  ---------------------------------------
+---------------------------------------
 
 ### CSS 단위와 스타일 속성 ###
 
@@ -172,3 +172,161 @@
   + text-shadow : 선택된 요소의 글자에 그림자를 부여하는 속성
   + box-shadow : 선택된 요소의 박스에 그림자를 부여하는 속성
   + text-shadow와 box-shadow 속성은 콤마(,)로 구분하여 여러 그림자를 넣을 수 있음
+---------------------------------------
+
+### 박스 모델 ###
+
+* HTML의 각 요소는 사각형의 박스 모양으로 취급이 되며, margin, border, padding, content의 영역을 나뉨
+  + mrgin : 다른 요소와 요소 사이의 간격
+  + border : 요소의 외곽선
+  + padding : 요소의 내용물과 박스 사이의 여백
+  + content : 요소의 내용물이 차지하는 영역
+
+* width/height 속성
+  + inline 형태의 요소는 폭과 높이 지정 불가능
+
+* box-sizing 속성 
+  + width와 height 속성이 적용되는 방식을 변경하는 속성
+  + content-box : 요소 내의 content 크기를 기준으로 박스의 크기를 결정
+  + border-box : 요소의 border를 기준으로 박스의 크기를 결정
+---------------------------------------
+
+### 레이아웃 관련 속성 ###
+
+* display 속성 : 요소가 화면에 어떻게 보여지게 하는가를 결정하는 속성
+  + none
+    + 선택된 요소를 화면에서 보이지 않게 함
+    + visibility 속성에서 hidden을 줘도 요소가 안 보이지만 요소가 투명해질 뿐 사라지는 것은 아님
+  + block
+    + 선택된 요소를 block 형식으로 지정
+    + block 형식의 요소는 위에서 아래로 쌓이는 형태로 화면에 나타남
+    + block 형식은 width와 height 속성이 적용됨
+  + inline
+    + 선택된 요소를 inline 형식으로 지정
+    + inline 형식의 요소는 옆으로 나열되는 형태로 화면에 나타남
+    + inline 형식은 width, height 속성 및 상하 margin 속성이 적용되지 않음
+  + inline-block
+    + 선택된 요소를 inline-block 형식으로 지정
+    + inline-block 형식의 요소는 옆으로 나열되는 형태로 화면에 나타남
+    + inline-block 형식은 width와 height 속성이 적용됨
+  + felx : 선택된 요소를 block-level의 flex 컨테이너로 지정
+  + inline-flex : 선택된 요소를 inline-level의 flex 컨테이너로 지정
+  + grid : 선택된 요소를 block-level의 grid 컨테이너로 지정
+  + inline-grid : 선택된 요소를 inline-level의 grid 컨테이너로 지정
+  + list-item : 선택된 요소를 <li>와 같이 동작하도록 지정
+  + table : 선택된 요소를 <table>과 같이 동작하도록 지정
+  + table-caption : 선택된 요소를 <caption>과 같이 동작하도록 지정
+  + table-column-group : 선택된 요소를 <colgroup>과 같이 동작하도록 지정
+  + table-header-group : 선택된 요소를 <thead>와 같이 동작하도록 지정
+  + table-footer-group : 선택된 요소를 <tfoot>과 같이 동작하도록 지정
+  + table-row-group : 선택된 요소를 <tbody>와 같이 동작하도록 지정
+  + table-cell : 선택된 요소를 <td>와 같이 동작하도록 지정
+  + table-column : 선택된 요소를 <col>과 같이 동작하도록 지정
+  + table-row : 선택된 요소를 <tr>과 같이 동작하도록 지정
+
+* 위치 관련 속성
+  + position 속성
+    + 요소의 위치 설정을 지정하는 속성
+    + 지정 가능한 속성값
+      + static(기본값) : 요소가 순서대로 배치, direction 속성을 추가로 사용하여 좌에서 우, 우에서 좌로 배치되는 순서 변경 가능
+      + absolute : 부모 요소를 기준으로 절대 위치 좌표를 설정
+      + fixed : 화면을 기준으로 절대 위치 좌표 설정
+      + relative : 초기 위치 상태를 기준으로 위치 좌표 설정
+  + top, bottom, left, right 속성
+    + 상, 하, 좌, 우의 위치를 지정하는 속성
+    + position 속성값에 따라 적용되는 기준이 달라짐
+  + z-index 속성 : 두 요소가 겹칠 경우 화면의 위로 쌓이는 위치를 지정
+    
+  * overflow 속성
+    + overflow 속성은 요소 내부의 내용물(자식 요소 포함)의 크기를 넘을 경우 어떻게 처리할 지 결정
+    + overflow 속성의 종류
+      + overflow-x : 내부의 내용물이 가로 방향으로 넘을 경우 처리 지정
+      + overflow-y : 내부의 내용물이 세로 방향으로 넘을 경우 처리 지정
+      + overflow : 가로, 세로 방향 모두 처리
+    + overflow 속성값
+      + hidden : 영역을 벗어나는 부분을 보이지 않게 함
+      + scroll : 내부 내용물이 박스 범위를 벗어나면 스크롤이 될 수 있도록 함
+
+  * flow 속성
+    + float 속성이 있는 요소는 다른 요소의 정상적인 흐름에서 벗어나 왼쪽 또는 오른쪽으로 부유하게 됨
+    + float 속성값
+      + left : 선택된 요소가 왼쪽으로 부유하게 됨
+      + right : 선택된 요소가 오른쪽으로 부유하게 됨
+---------------------------------------
+
+### Flex 박스와 Grid ###
+  
+#### Flex 박스 ####
+
+  * flex 박스 인터페이스 내의 아이템 간 공간 배분과 정렬 기능을 제공하기 위한 1차원 레이아웃 모델
+  * display 속성이 flex일 경우 해당 요소는 flex box로 지정됨
+  * flex box의 자식 요소들은 flex item이 됨
+  * flex 박스가 가질 수 있는 속성
+    + flex-direction
+    + justify-content
+    + align-items
+    + flex-wrap
+    + algin-content
+  * flex item이 가질 수 있는 속성
+    + order
+    + margin 속성값이 aut일 경우 flex item들이 배치되고 남은 공간을 나눠서 margin을 배분
+    + align-self
+
+#### Grid ####
+  
+  * Grid는 인터페이스 내의 아이템 간 공간 배분과 정렬 기능을 제공하기 위한 2차원 레이아웃 모델
+  * display 속성이 grid일 경우 해당 요소는 grid containeer로 지정됨
+  * Grid container의 자식 요소들은 grid item이 됨
+  * Grid container가 가질 수 있는 속성
+    + grid-template-rows : 명시적 행(track)의 크기 지정
+    + grid-template-columns : 명시적 열(track)의 크기 지정
+    + grid-template-area : 영역(area) 이름을 참조해 템플릿 생성
+    + grid-template : grid-template-rows와 grid-template-columns를 한 번에 지정
+    + grid-auto-rows : 암시적인 행의 크기 지정
+    + grid-auto-columns : 암시적인 열의 크기 지정
+    + grid-auto-flow : 자동 배치 알고리즘 방식 정의
+      + row 속성 : 각 행 축을 따라 차례로 배치 (기본값)
+      + column 속성 : 각 열 축을 따라 차례로 배치
+      + row dense 속성 : 각 행 축을 따라 차례로 배치하되, 빈 영역을 매움
+      + column dense 속성 : 각 열 축을 따라 차례로 배치하되, 빈 영역을 매움
+    + grid : grid-template-rows, grid-template-columns, grid-auto-rows, grid-auto-columns를 한번에 지정
+    + row-gap(grid-row-gap) : 행과 행 사이의 간격(line) 지정
+    + column-gap(grid-column-gap) : 열과 열 사이의 간격(line) 지정
+    + gap(grid-gap) : row-gap과 column-gap을 한 번에 지정
+    + align-content : grid 콘텐츠의 수직 축 정렬
+      + normal 속성 : strech와 동일
+      + start 속성 : 시작점(위쪽)으로 정렬
+      + center 속성 : 수직 가운데로 정렬
+      + end 속성 : 끝점(아래쪽)으로 정렬
+      + space-around 속성 : 각 행을 위 아래로 여백을 고르게 정렬
+      + space-between 속성 : 첫 행은 시작점에 끝 행은 끝점에 정렬하고 나머지는 고르게 정렬
+      + space-evenly 속성 값 : 모든 여백을 고르게 정렬
+      + strech 속성 : 수직 축을 채우기 위해 grid의 콘텐츠를 늘림
+    + justify-content : grid 콘텐츠의 수평 축 정렬 (속성값은 align-content와 동일하나 방향이 수평)
+    + place-content : align-content와 justify-content를 한 번에 지정
+    + align-items : grid item들의 수직 축 정렬
+      + normal 속성 : strech와 동일
+      + start 속성 : 시작점(위쪽)으로 정렬
+      + center 속성 : 수직 가운데로 정렬
+      + end 속성 : 끝점(아래쪽)으로 정렬
+      + strech : 수직 축을 채우기 위해 grid의 콘텐츠를 늘림
+    + justify-items : grid item들의 수평 축 정렬 (속성값은 align-items와 동일하나 방향이 수평)
+    + place-items : algin-items와 justify-items를 한 번에 지정
+  * Grid item이 가질 수 있는 속성
+    + grid-row-start : grid item의 행 시작 위치 지정
+    + grid-row-end : grid item의 행 끝 위치 지정
+    + grid-row : grid-row-start와 grid-row-end를 한 번에 지정
+    + grid-column-start : grid item의 열 시작 위치 지정
+    + grid-column-end : grid item의 열 끝 위치 지정
+    + grid-column : grid-column-start와 grid-column-end를 한 번에 지정
+    + grid-area : 영역 이름을 설정하거나, grid-row와 grid-column을 한 번에 지정
+    + align-self : 단일 grid item을 수직 축 정렬
+    + justify-self : 단일 grid item을 수평 축 정렬
+    + place-self : align-self와 justify-self를 한 번에 지정
+    + order : grid item의 배치 순서 지정 (기본 값은 0)
+    + z-index : grid item의 쌓이는 순서 지정
+  * Grid 관련 용어 정리
+    + Track: 하나의 행(row) 또는 열(Column)을 의미
+    + Line(Gutter): 트랙과 트랙 사이의 간격
+    + Cell: grid item이 배치되는 최소 단위의 영역
+    + Area: grid item이 배치되는 하나 이상의 cell로 이루어진 영역(실제 grid item이 배치되는 영역)
