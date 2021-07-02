@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <title>position 속성 static</title>
+  <style>
+    div:not(.item) {
+      margin: 0; padding: 10px;
+      width: 150px; height: 150px;
+      background-color: orange;
+      border: 1px solid black;
+    }
+    nav.fixed {
+      padding: 20px;
+      position: fixed;
+      top: 0; right: 0;
+      height: 100%;
+      background-color: gray;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h5>Section 1</h5>
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+  </div>
+  <nav class="fixed">
+    <h5>Side Menu</h5>
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+  </div>
+  <div>
+    <h5>Section 2</h5>
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+  </div>
+</body>
+</html>
