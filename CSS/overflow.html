@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <title>overflow</title>
+  <style>
+    .flex-box {
+      display: flex;
+    }
+    .container {
+      margin: 5px auto;
+      width: 200px; height: 200px;
+      border: 1px solid black;
+    }
+    .hidden { overflow: hidden; }
+    .scroll { overflow: scroll; }
+    .item {
+      margin: 5px auto;
+      width: 100px; height: 100px;
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+<body>
+  <div class="flex-box">
+    <div class="container">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+    </div>
+    <div class="container hidden">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+    </div>
+    <div class="container scroll">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+    </div>
+  </div>
+</body>
+</html>
