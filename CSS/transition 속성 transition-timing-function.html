@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>transition 속성 transition-timing-function</title>
+  <style>
+    .container {
+      width: 620px;
+      border: 1px solid #aaa;
+    }
+    .bar {
+      width: 10px; height: 50px;
+      background-color: orange;
+      margin: 5px 10px;
+      transition-duration: 3s;
+    }
+    .container:hover > .bar {
+      width: 600px;
+    }
+    .bar:nth-child(1) {
+      transition-timing-function: linear;
+    }
+    .bar:nth-child(2) {
+      transition-timing-function: ease;
+    }
+    .bar:nth-child(3) {
+      transition-timing-function: ease-in;
+    }
+    .bar:nth-child(4) {
+      transition-timing-function: ease-out;
+    }
+    .bar-nth-child(5) {
+      transition-timing-function: ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Transition 실습</h1>
+  <div class="container">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+</body>
+</html>
