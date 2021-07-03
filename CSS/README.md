@@ -330,3 +330,27 @@
     + Line(Gutter): 트랙과 트랙 사이의 간격
     + Cell: grid item이 배치되는 최소 단위의 영역
     + Area: grid item이 배치되는 하나 이상의 cell로 이루어진 영역(실제 grid item이 배치되는 영역)
+---------------------------------------
+
+### transition ###
+
+#### transition 관련 속성 ####
+
+  * transition 관련 속성 정리
+    + transition : 모든 transition 관련 속성의 단축 속성
+    + transition-delay : 이벤트 발생 후 몇 초 후에 재생할지 지정
+    + transition-duration : 몇 초 동안 재생할지 지정
+    + transition-property : 어떤 속성을 변형할지 지정
+    + transition-timing-funtion : 수치 변형 함수 지정
+  * transition 관련 속성들은 HTML 요소의 스타일 속성(크기, 색상 등)에 변화가 생길 때, 부드럽게 변화를 시킬 수 있도록 하는 속성
+  * 매우 쉽게 애니메이션이 적용되는 효과를 볼 수 있음
+
+#### transition 속성이 적용되는 스타일 속성 ####
+
+  + 위치 속성 : top, left, bottom, right
+  + 크기 속성 : width, height
+  + 박스 속성 : margin, padding
+  + 테두리 속성 : border-width, border-radius, border-color
+  + 색상 속성 : color, background-color
+  + 투명도 속성 : opacity
+  + 변호나 속성 : transform
