@@ -1,25 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-<head>
-  <title>Grid container 속성 align-items, justify-items</title>
-  <style>
-    .container {
-      border: 1px solid red;
-      display: grid;
-      grid-template: repeat(3, 100px) / repeat(3, 1fr); 
-      align-items: start;   /* 속성값을 변경하며 실습 */
-      justify-items: start; /* 속성값을 변경하며 실습 */
-    }
-    div:not(.container) { border: 1px solid #333; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div>Item 1</div>
-    <div>Item 2</div>
-    <div>Item 3</div>
-    ...
-    <div>Item 9</div>
-  </div>
-</body>
+  <head>
+    <title>Grid container 속성 align-items, justify-items</title>
+    <style>
+      .container {
+        border: 1px solid red;
+        display: grid;
+        grid-template: repeat(3, 100px) / repeat(3, 1fr);
+        align-items: start; /* 속성값을 변경하며 실습 */
+        justify-items: start; /* 속성값을 변경하며 실습 */
+      }
+      div:not(.container) {
+        border: 1px solid #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+      ...
+      <div>Item 9</div>
+    </div>
+  </body>
 </html>
