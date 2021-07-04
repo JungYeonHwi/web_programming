@@ -1,34 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-<head>
-  <title>Grid container 속성 grid-template-areas</title>
-  <style>
-    .container {
-      display: grid;
-      grid-template-rows: repeat(3, 100px); 
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas:
-        "header header header"
-        "section section aside"
-        "footer footer footer";
-    }
-    header {
-      grid-area: header; background-color: orange; }
-    section {
-      grid-area: section; background-color: #eee; }
-    aside {
-      grid-area: aside; background-color: greenyellow; }
-    footer {
-      grid-area: footer; background-color: yellow; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>Header</header>
+  <head>
+    <title>Grid container 속성 grid-template-areas</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-rows: repeat(3, 100px);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+          "header header header"
+          "section section aside"
+          "footer footer footer";
+      }
+      header {
+        grid-area: header;
+        background-color: orange;
+      }
+      section {
+        grid-area: section;
+        background-color: #eee;
+      }
+      aside {
+        grid-area: aside;
+        background-color: greenyellow;
+      }
+      footer {
+        grid-area: footer;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Header</header>
 
-    <section>Section</section>
-    <aside>Aside</aside>
-    <footer>Footer</footer>
-  </div>
-</body>
+      <section>Section</section>
+      <aside>Aside</aside>
+      <footer>Footer</footer>
+    </div>
+  </body>
 </html>
