@@ -1,28 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-<head>
-  <title>flex item 속성 auto margin</title>
-  <style>
-    .flex-box {
-      display: flex;
-      width: 600px; height: 250px;
-      background-color: lightgray;
-    }
-    .flex-item {
-      width: 100px; height: 100px;
-      margin: 10px;
-      background-color: cornflowerblue;
-    }
-    .flex-item:first-child {
-      margin-right: auto;
-    }
-  </style>
-</head>
-<body>
-  <div class="flex-box">
-    <div class="flex-item">Flex Item 1</div>
-    <div class="flex-item">Flex Item 2</div>
-    <div class="flex-item">Flex Item 3</div>
-  </div>
-</body>
+  <head>
+    <title>flex item 속성 auto margin</title>
+    <style>
+      .flex-box {
+        display: flex;
+        width: 600px;
+        height: 250px;
+        background-color: lightgray;
+      }
+      .flex-item {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        background-color: cornflowerblue;
+      }
+      .flex-item:first-child {
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-box">
+      <div class="flex-item">Flex Item 1</div>
+      <div class="flex-item">Flex Item 2</div>
+      <div class="flex-item">Flex Item 3</div>
+    </div>
+  </body>
 </html>
