@@ -1,36 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-<head>
-  <title>position 속성 static</title>
-  <style>
-    div:not(.item) {
-      margin: 0; padding: 10px;
-      width: 150px; height: 150px;
-      background-color: orange;
-      border: 1px solid black;
-    }
-    .absolute {
-      position: absolute;
-      bottom: 100px;
-      right: 100px;
-    }
-  </style>
-</head>
-<body>
-  <div>
-    <h5>Default Position 1</h5>
-    <div class="item">Item 1</div>
-    <div class="item">Item 2</div>
-  </div>
-  <div class="absolute">
-    <h5>Absolute Position</h5>
-    <div class="item">Item 1</div>
-    <div class="item">Item 2</div>
-  </div>
-  <div>
-    <h5>Default Position 2</h5>
-    <div class="item">Item 1</div>
-    <div class="item">Item 2</div>
-  </div>
-</body>
+  <head>
+    <title>position 속성 static</title>
+    <style>
+      div:not(.item) {
+        margin: 0;
+        padding: 10px;
+        width: 150px;
+        height: 150px;
+        background-color: orange;
+        border: 1px solid black;
+      }
+      .absolute {
+        position: absolute;
+        bottom: 100px;
+        right: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h5>Default Position 1</h5>
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+    </div>
+    <div class="absolute">
+      <h5>Absolute Position</h5>
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+    </div>
+    <div>
+      <h5>Default Position 2</h5>
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+    </div>
+  </body>
 </html>
