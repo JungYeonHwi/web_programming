@@ -1,39 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-<head>
-  <title>position 속성 static</title>
-  <style>
-    div:not(.item) {
-      margin: 0; padding: 10px;
-      width: 150px; height: 150px;
-      background-color: orange;
-      border: 1px solid black;
-    }
-    .static {
-      position: static;
-      top: 100px; left: 100px;
-    }
-    .relative {
-      position: relative;
-      top: 100px; left: 100px;
-    }
-  </style>
-</head>
-<body>
-  <div class="static">
-    <h5>Static Position</h5>
-    <div class="item">Item 1</div>
-    <div class="item">Item 2</div>
-  </div>
-  <div class="relative">
-    <h5>Relative Position</h5>
-    <div class="item">Item 1</div>
-    <div class="item">Item 2</div>
-  </div>
-  <div>
-    <h5>Default Position</h5>
-    <div class="item">Item 1</div>
-    <div class="item">Item 2</div>
-  </div>
-</body>
+  <head>
+    <title>position 속성 static</title>
+    <style>
+      div:not(.item) {
+        margin: 0;
+        padding: 10px;
+        width: 150px;
+        height: 150px;
+        background-color: orange;
+        border: 1px solid black;
+      }
+      .static {
+        position: static;
+        top: 100px;
+        left: 100px;
+      }
+      .relative {
+        position: relative;
+        top: 100px;
+        left: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="static">
+      <h5>Static Position</h5>
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+    </div>
+    <div class="relative">
+      <h5>Relative Position</h5>
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+    </div>
+    <div>
+      <h5>Default Position</h5>
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+    </div>
+  </body>
 </html>
