@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>비동기 프로그램</title>
+  </head>
+  <body>
+    <h1>Asynchronous Program</h1>
+    <div class="container"></div>
+    <script>
+      const container = document.querySelector(".container");
+      console.log("start");
+      longTask(15);
+      longTask(50);
+      longTask(1);
+      longTask(0);
+      console.log("end");
+
+      function longTask(day) {
+        setTimeout(() => {
+          const date = new Date();
+          const element = document.createElement("p");
+          date.setDate(date.getDate() + day);
+          element.innerHTML = `day ${day}: ${date}`;
+          container.appendChild(element);
+          console.log(date);
+        }, day * 100);
+      }
+    </script>
+  </body>
+</html>
