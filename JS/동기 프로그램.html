@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>동기 프로그램</title>
+  </head>
+  <body>
+    <h1>Synchronous Program</h1>
+    <div class="container"></div>
+    <script>
+      const container = document.querySelector(".container");
+      console.log("start");
+      const dates = longTask();
+      console.log("end");
+
+      dates.slice(0, 10).forEach((d) => {
+        const element = document.createElement("p");
+        element.innerHTML = `${d}`;
+        container.appendChild(element);
+      });
+
+      function longTask() {
+        const dates = [];
+        let cnt = 0;
+        for (let i = 0; i < 10000000; i++) {
+          const date = new Date();
+          date.setDate(date.getDate() + cnt);
+          dates.push(date);
+          cnt++;
+        }
+        return dates;
+      }
+    </script>
+  </body>
+</html>
